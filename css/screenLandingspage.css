@@ -1,0 +1,955 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+@import url('https://p.typekit.net/p.css?s=1&k=ppa1rpo&ht=tk&f=5623.5624.5625.5626&a=21001709&app=typekit&e=css');
+
+@font-face {
+  font-family: 'p22-underground';
+  src: url('https://use.typekit.net/af/7bf3d5/00000000000000000000de3a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/7bf3d5/00000000000000000000de3a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/7bf3d5/00000000000000000000de3a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3')
+      format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'p22-underground';
+  src: url('https://use.typekit.net/af/ad8f50/00000000000000000000de3b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/ad8f50/00000000000000000000de3b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/ad8f50/00000000000000000000de3b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+      format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'p22-underground';
+  src: url('https://use.typekit.net/af/4a044b/00000000000000000000de3c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/4a044b/00000000000000000000de3c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/4a044b/00000000000000000000de3c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+      format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'p22-underground';
+  src: url('https://use.typekit.net/af/54c493/00000000000000000000de3d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/54c493/00000000000000000000de3d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/54c493/00000000000000000000de3d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+      format('opentype');
+  font-weight: 600;
+}
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+  /* colors */
+  --global-color-alpha: #ef6337;
+  --global-color-alpha2: #903c22;
+  --global-color-alpha3: #a46a59;
+  --global-color-white: white;
+  --global-color-border: #c6cacc;
+  --global-color-alpha-transparent: rgba(239, 99, 55, 0.3);
+  --global-color-error: #ff3333;
+  --global-input-error-borderColor: #ff3333
+  /* fonts */
+
+  /* shadows */
+  --global-input-focus-boxShadowSpread: 26 182 255 3px;
+  --global-input-focus-boxShadowColor: var(--global-color-alpha-transparent);
+
+  /* borders */
+  --global-borderRadius: 2px;
+  --global-borderWidth: 2px;
+
+  /* transitions */
+  --global-transitionEasing-out: ease-out;
+  --global-transitionEasing-out-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --global-transitionDuration-alpha: 0.1s;
+  --global-transitionDuration-beta: 0.2s;
+  --global-transitionDuration-gamma: 0.3s;
+
+  /* Baseline settings */
+  --global-baseline: 8px;
+  --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+
+  --global-whitespace-xs: calc(var(--global-baseline) * 0.5); /* = 4px */
+  --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
+  --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
+  --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
+  --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
+  --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+
+  /* forms */
+  --global-label-color: var(--global-color-neutral-xx-dark);
+  --global-placeholder-color: var(--global-color-neutral-x-light);
+  --global-input-backgroundColor: var(--global-color-white);
+  --global-input-color: var(--global-color-neutral-xxxx-dark);
+  --global-input-borderColor: var(--global-color-border);
+  --global-input-hover-borderColor: var(--global-color-alpha);
+  --global-input-focus-borderColor: var(--global-color-alpha);
+}
+
+.has-error {
+  --label-color: var(--global-color-error);
+  --input-borderColor: var(--global-input-error-borderColor);
+}   
+
+/*------------------------------------*\
+  #GENERIC
+  \*------------------------------------*/
+
+/*
+      Generic: Page
+      ---
+      Global page styles + universal box-sizing:
+  */
+
+html {
+  height: 75%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'p22-underground', sans-serif;
+  color: var(--global-color-text);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  background-image: url(/img/background2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 434px) {
+  html {
+    background-image: none;
+  }
+}
+@media (min-width: 800px) {
+  html {
+    height: 50%;
+    background-image: url(/img/wave.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+  * Remove text-shadow in selection highlight:
+  * https://twitter.com/miketaylr/status/12228805301
+  *
+  * Customize the background color to match your design.
+  */
+
+::-moz-selection {
+  background: var(--global-color-alpha);
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: var(--global-color-alpha);
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+  \*------------------------------------*/
+
+/*
+  Elements: Images
+  ---
+  Default markup for images to make them responsive
+  */
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/*
+      Elements: typography
+      ---
+      Default markup for typographic elements
+  */
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin: 0 0 24px;
+}
+
+ul,
+ol {
+  padding-left: 0px;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-style: normal;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figcaption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
+}
+
+a {
+  transition: all var(--transition-alpha);
+  color: var(--color-alpha);
+  outline-color: var(--color-alpha);
+  outline-width: medium;
+  outline-offset: 2px;
+}
+
+a:visited,
+a:active {
+  color: var(--color-alpha);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-alpha-light);
+}
+
+label,
+input {
+  display: inline-block;
+}
+
+select {
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--color-neutral);
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+  \*------------------------------------*/
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+/*
+      Objects: Row
+      ---
+      Creates a horizontal row that stretches the viewport and adds padding around children
+  */
+
+.o-row {
+  position: relative;
+  padding: 24px 24px 0;
+}
+
+/* size modifiers */
+
+.o-row--lg {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.o-row--xl {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-row--xl {
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+}
+
+/*
+      Objects: Container
+      ---
+      Creates a horizontal container that sets de global max-width
+  */
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 79.5em; /* 79.5 * 16px = 1272 */
+  width: 100%;
+}
+
+/*
+      Objects: section
+      ---
+      Creates vertical whitespace between adjacent sections inside a row
+  */
+
+.o-section {
+  position: relative;
+}
+
+.o-section + .o-section {
+  padding-top: 8px;
+}
+
+/*
+      Objects: List
+      ---
+      Small reusable object to remove default list styling from lists
+  */
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*
+      Object: Button reset
+      ---
+      Small button reset object
+  */
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/*
+      Object: Hide accessible
+      ---
+      Accessibly hide any element
+  */
+
+.o-hide-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+  \*------------------------------------*/
+
+.c-app {
+  height: 100%;
+
+  justify-items: center;
+}
+@media (min-width: 434px) {
+  .c-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.c-app__title {
+  grid-row: 1;
+  grid-column: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+@media (min-width: 434px) {
+  .c-app__title {
+    grid-row: 1;
+    grid-column: 1;
+    background-image: url(/img/background2.svg);
+  }
+}
+@media (min-width: 800px) {
+  .c-app__title {
+    background-image: none;
+  }
+}
+.c-app__img {
+  display: flex;
+  justify-content: center;
+  grid-row: 1;
+  grid-column: 2;
+  height: auto;
+  width: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 434px) {
+  .c-app__img {
+    grid-row: 1;
+    grid-column: 2;
+    background-image: url(/img/background2.svg);
+  }
+}
+@media (min-width: 800px) {
+  .c-app__img {
+    background-image: none;
+  }
+}
+
+.c-app__features {
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-row: 2;
+  grid-column: span 2;
+}
+@media (min-width: 512px) {
+  .c-app__features {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+.c-title {
+  display: flex;
+  color: var(--global-color-white);
+  justify-content: left;
+  font-size: 36px;
+  padding: 40px 24px 12px 24px;
+  font-weight: 600;
+}
+@media (min-width: 512px) {
+  .c-title {
+    font-size: 48px;
+  }
+}
+
+.c-title__second {
+  color: var(--global-color-alpha2);
+  font-size: 36px;
+  margin: 0 0 10px;
+  padding: 32px 0 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.c-title__second::after {
+  background-color: var(--global-color-alpha2);
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 50px;
+}
+
+.c-text {
+  display: flex;
+  justify-content: left;
+  margin: 0px 32px 32px 32px;
+  color: var(--global-color-white);
+  font-size: 48px;
+  font-weight: 300;
+}
+@media (min-width: 512px) {
+  .c-text {
+    font-size: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .c-text {
+    margin: 0px 32px 16px 32px;
+  }
+}
+
+.c-form-field--option {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.c-input {
+  display: flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: var(--global-borderWidth) solid var(--input-borderColor, var(--global-input-borderColor));
+  border-radius: var(--global-borderRadius);
+  color: var(--global-color-neutral-xxxx-dark);
+  background-color: var(--global-input-backgroundColor);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: calc(var(--global-baseline) * 3);
+  padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+  outline: none;
+  transition: border var(--global-transition-timing-alpha);
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1200px) {
+  .c-input {
+    margin: 0 25% 0 25%;
+    width: 50%;
+  }
+}
+/*
+  Components option
+  */
+
+/*
+      Custom option
+      ---
+      Custom checkboxes & radio buttons
+  */
+
+/* Hide the actual input with the class .o-hide-accessible */
+.c-option {
+  margin-right: var(--global-whitespace-sm);
+}
+/* focused and active state */
+
+.c-option--hidden:focus + .c-custom-option,
+.c-option--hidden:active + .c-custom-option {
+  --custom-option-borderColor: var(--global-input-focus-borderColor);
+  --custom-option-boxShadow: var(--global-input-focus-boxShadow);
+}
+
+/* checked state */
+
+.c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
+  opacity: 1; /* Show the symbol when the invisible checkbox/radio button is checked */
+  transform: scale(1);
+}
+.c-option--hidden:focus + .c-custom-toggle,
+.c-option--hidden:active + .c-custom-toggle {
+  --toggle-borderColor: var(--global-input-focus-borderColor);
+  --toggle-boxShadow: var(--toggle-focus-boxShadow);
+}
+
+/* checked state */
+
+.c-option--hidden:checked + .c-custom-toggle {
+  --toggle-backgroundColor: var(--toggle-checked-backgroundColor);
+  --toggle-borderColor: var(--toggle-checked-borderColor);
+  --toggle__switch-backgroundColor: var(--toggle__switch-checked-backgroundColor);
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
+  transform: translate(24px, 0);
+}
+
+/* special active state */
+
+.c-label {
+
+  text-align: center;
+  margin: 24px 25% 0 25%;
+  padding-bottom: var(--global-whitespace-sm);
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--label-color, #000000);
+  width: 50%;
+}
+
+.c-label--option {
+  padding-bottom: 0;
+}
+.c-custom-toggle {
+  --toggle-backgroundColor: var(--global-color-neutral-xxxx-light);
+  --toggle-checked-borderColor: var(--global-color-alpha-dark);
+  --toggle-checked-backgroundColor: var(--global-color-alpha);
+  --toggle-focus-boxShadow: var(--global-input-focus-boxShadow);
+  --toggle__switch-backgroundColor: White;
+  --toggle__switch-checked-backgroundColor: White;
+  --toggle__switch-transition: all var(--global-transitionDuration-alpha);
+  display: flex;
+  align-items: center;
+}
+.c-custom-toggle__fake-input {
+  display: block;
+  height: 24px;
+  width: 48px;
+  margin-right: var(--global-whitespace-md);
+  margin-bottom: var(--global-whitespace-md);
+  background-color: var(--toggle-backgroundColor);
+  border-radius: 32px;
+  border: var(--global-borderWidth) solid var(--toggle-borderColor, var(--global-input-borderColor));
+  transition: all var(--global-transitionDuration-alpha);
+  box-shadow: var(--toggle-boxShadow, 0);
+}
+.c-custom-toggle__fake-input::after {
+  position: relative;
+  display: block;
+  content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 22px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--toggle__switch-backgroundColor);
+  transition: var(--toggle__switch-transition);
+}
+
+.c-button {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: var(--global-borderRadius);
+  border: var(--global-borderWidth) solid var(--global-color-alpha-dark);
+  background-color: var(--global-color-alpha);
+  color: #fff;
+  padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
+  line-height: calc(var(--global-baseline) * 3);
+  width: 200px;
+  outline: none;
+  transition: all var(--global-transition-timing-alpha);
+  border-radius: 25px;
+
+  margin: 24px auto 0 auto;
+}
+@media (min-width: 1200px) {
+  .c-button {
+    margin: 24px 25% 0 25%;
+    width: 50%;
+  }
+}
+
+.c-button:hover {
+  background-color: var(--global-color-alpha);
+}
+
+.c-button:focus {
+  box-shadow: 0 0 0 3px var(--global-color-alpha-transparent);
+}
+
+.c-button:active {
+  background-color: var(--global-color-alpha2);
+  box-shadow: none;
+}
+
+/*------------------------------------*\
+  #UTILITIES
+  \*------------------------------------*/
+.u-detail {
+  font-size: 16px;
+}
+@media (min-width: 512px) {
+  .u-detail {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .u-detail {
+    font-size: 24px;
+  }
+}
+
+.u-mute {
+  color: var(--global-color-text-light);
+}
+
+.u-height {
+  height: 160px;
+}
+/*
+      Utilities: color
+      ---
+      Utility classes to put specific colors onto elements
+  */
+
+.u-color-neutral-light {
+  color: lightGray;
+}
+
+.u-color-neutral {
+  color: Gray;
+}
+.u-text-label {
+  font-size: bold;
+  color: var(--global-color-text);
+}
+/*
+      Utilities: spacing
+      ---
+      Utility classes to put specific margins and paddings onto elements
+  */
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+  margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+  margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+  margin-bottom: 48px !important;
+}
+
+/*
+      Utilities: max-width
+      ---
+      Utility classes to put specific max widths onto elements
+  */
+.u-max-width-xs {
+  max-width: 27em !important;
+}
+
+.u-max-width-sm {
+  max-width: 32em !important;
+}
+
+.u-max-width-md {
+  max-width: 50em !important;
+}
+
+.u-max-width-lg {
+  max-width: 63.5em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+/*
+      Utilities: align
+      ---
+      Utility classes align text or components
+  */
+
+.u-align-text-center {
+  text-align: center;
+}
+
+.u-align-center {
+  margin: 0 auto;
+}
+
+/*
+      Utilities: text
+      Utility classes to create smaller or bigger test
+  */
+
+.u-text-sm {
+  font-size: 14px;
+}
+
+/*------------------------------------*\
+  #MEDIA
+  \*------------------------------------*/
+
+/*
+      Media Queries
+      ---
+      EXAMPLE Media Queries for Responsive Design.
+      These examples override the primary ('mobile first') styles.
+      USE THEM INLINE!
+  */
+
+/* Extra small devices (portrait phones, less than 576px)
+  No media query since this is the default in mobile first design
+  */
+
+/* Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {}
+  */
+
+/* Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {}
+  */
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+  @media (min-width: 992px) {}
+  */
+
+/* Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {}
+  */
+
+/*
+      Print styles.
+      ---
+      Inlined to avoid the additional HTTP request:
+      http://www.phpied.com/delay-loading-your-print-css/
+  */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+          http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+  /*
+      * Don't show links that are fragment identifiers,
+      * or use the `javascript:` pseudo protocol
+      */
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+      * Printing Tables:
+      * http://css-discuss.incutio.com/wiki/Printing_Tables
+      */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

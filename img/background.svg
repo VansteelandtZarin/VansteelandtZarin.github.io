@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Union_1_1_);stroke:#707070;}
+</style>
+<linearGradient id="Union_1_1_" gradientUnits="userSpaceOnUse" x1="1.2187" y1="1081.5425" x2="1.2187" y2="1080.5425" gradientTransform="matrix(1920 0 0 -1079.1 -1379.4449 1166750.875)">
+	<stop  offset="0" style="stop-color:#903C22"/>
+	<stop  offset="1" style="stop-color:#A46A59"/>
+</linearGradient>
+<path id="Union_1" class="st0" d="M1097.33,630.11c-594.67-335.66-555.02-76.65-732.1,0S0.5,527.5,0.5,527.5v-869h1920v750h-1.37
+	c-5.31,12.71-140.86,329.06-466.35,329.1C1352.78,737.62,1234.93,707.78,1097.33,630.11z"/>
+</svg>
